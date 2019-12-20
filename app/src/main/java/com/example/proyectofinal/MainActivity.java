@@ -118,8 +118,22 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(MainActivity.this,
                             Main2Activity.class);
-                    intent.putExtra("ID", id);
+
+                    Ejercicio tmp = (Ejercicio) parent.getItemAtPosition(position);
+
+                    Bundle bundle = new Bundle();
+                    bundle.putLong("ID",id);
+                    bundle.putString("Nombre",tmp.getNombre());
+                    bundle.putString("Maquina",tmp.getMaquina());
+                    bundle.putString("Reps",tmp.getRepeticiones());
+                    bundle.putString("Series",tmp.getSeries());
+                    bundle.putString("Tipo",tmp.getTipo());
+                    bundle.putString("Calentamiento",tmp.getCalentamiento());
+
+                    intent.putExtras(bundle);
                     startActivity(intent);
+
+
 
                 }
             });

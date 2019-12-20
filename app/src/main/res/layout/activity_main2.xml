@@ -4,7 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Black"
+    android:background="@drawable/fondoinfo21"
     tools:context=".Main2Activity">
 
+    <ImageView
+        android:id="@+id/ivEjercicio"
+        android:layout_width="186dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="241dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/Beige"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEjercicio" />
+
+    <TextView
+        android:id="@+id/tvDescrip"
+        android:layout_width="214dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center|top"
+        android:text="TextView"
+        android:textColor="@color/Beige"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+    <TextView
+        android:id="@+id/tvComp"
+        android:layout_width="218dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="47dp"
+        android:gravity="center|top"
+        android:text="TextView"
+        android:textColor="@color/Beige"
+        app:layout_constraintBottom_toTopOf="@+id/btnEmpezar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrip"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnEmpezar"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/DarkOrange"
+        android:text="Empezar"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
