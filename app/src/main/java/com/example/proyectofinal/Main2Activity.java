@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
+    private final static String LOGTAG = "DEPURACION";
 
     TextView tvNombre,tvDescrip,tvCompl;
     Button btnEmpezar;
@@ -24,11 +26,11 @@ public class Main2Activity extends AppCompatActivity {
 
         Long id = bundle.getLong("ID");
         final String nombre = bundle.getString("Nombre");
-        String maquina = bundle.getString("Maquina");
-        String tipo = bundle.getString("Tipo");
-        String series = bundle.getString("Series");
-        String repeticiones = bundle.getString("Reps");
-        String calentamiento = bundle.getString("Calentamiento");
+        final String maquina = bundle.getString("Maquina");
+        final String tipo = bundle.getString("Tipo");
+        final String series = bundle.getString("Series");
+        final String repeticiones = bundle.getString("Reps");
+        final String calentamiento = bundle.getString("Calentamiento");
 
         tvNombre = findViewById(R.id.tvNombre);
         tvDescrip = findViewById(R.id.tvDescrip);
@@ -45,6 +47,7 @@ public class Main2Activity extends AppCompatActivity {
         }else if (tipo.equals("3")){
             tvDescrip.setText("Este ejercicio es parte de tu rutina de fuerza.");
         }
+        Log.d(LOGTAG,"Series "+nombre+" maquina "+maquina);
 
         tvCompl.setText("Para este ejercicio necesitas "+maquina+"\n"+
                         "Se recomienda hacer "+series+" series, "+repeticiones+" repeticiones y "+
@@ -57,35 +60,35 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-        switch (Integer.parseInt(""+id)){
-            case 1:
+        switch (nombre){
+            case "Pesas":
                 ivEjercicio.setImageResource(R.drawable.img1);
                 break;
-            case 2:
+            case "Spining":
                 ivEjercicio.setImageResource(R.drawable.img2);
                 break;
-            case 3:
+            case "Remo":
                 ivEjercicio.setImageResource(R.drawable.img3);
                 break;
-            case 4:
+            case "Box":
                 ivEjercicio.setImageResource(R.drawable.img4);
                 break;
-            case 5:
+            case "Yoga":
                 ivEjercicio.setImageResource(R.drawable.img5);
                 break;
-            case 6:
+            case "Karate":
                 ivEjercicio.setImageResource(R.drawable.img6);
                 break;
-            case 7:
+            case "Push ups":
                 ivEjercicio.setImageResource(R.drawable.img7);
                 break;
-            case 8:
+            case "Abs":
                 ivEjercicio.setImageResource(R.drawable.img8);
                 break;
-            case 9:
+            case "Sentadillas":
                 ivEjercicio.setImageResource(R.drawable.img9);
                 break;
-            case 10:
+            case "Correr":
                 ivEjercicio.setImageResource(R.drawable.img10);
                 break;
 

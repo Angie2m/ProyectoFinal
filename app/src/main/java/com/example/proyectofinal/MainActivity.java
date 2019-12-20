@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
                 Ejercicio ejercicioTemp = new Ejercicio();
                 ejercicioTemp.setId(ob1.getLong("id"));
                 ejercicioTemp.setNombre(ob1.getString("nombre"));
+                ejercicioTemp.setMaquina(ob1.getString("maquina"));
+                ejercicioTemp.setCalentamiento(ob1.getString("calentamiento"));
+                ejercicioTemp.setSeries(ob1.getString("series"));
+                ejercicioTemp.setRepeticiones(ob1.getString("repeticiones"));
                 ejercicioTemp.setTipo(ob1.getString("tipo"));
                 datos.add(ejercicioTemp);
             }

@@ -4,4 +4,5 @@
     <string name="Bienvenida">Welcome!!</string>
     <string name="Rutina">Workout</string>
     <string name="espere">Please, hold on ...</string>
+    <string name="maquina">Machine:</string>
 </resources>

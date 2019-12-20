@@ -50,9 +50,9 @@ public class Adaptador extends BaseAdapter {
                 .elemento_lista, null);
 
         TextView tvNombre = vista.findViewById(R.id.tvNombre);
-        TextView tvTipo = vista.findViewById(R.id.tvTipo);
+        TextView tvMaquina = vista.findViewById(R.id.tvMaquina);
         tvNombre.setText(datos.get(position).getNombre());
-        tvTipo.setText(datos.get(position).getTipo());
+        tvMaquina.setText(datos.get(position).getMaquina());
 
         return vista;
     }

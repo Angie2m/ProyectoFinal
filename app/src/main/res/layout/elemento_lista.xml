@@ -24,14 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="65dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="70dp" />
+        app:layout_constraintGuide_begin="82dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -47,21 +40,28 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="4dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="174dp" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="391dp"
-        android:layout_height="59dp"
+        android:layout_width="379dp"
+        android:layout_height="77dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/blue" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ladrillos" />
 
     <TextView
         android:id="@+id/tvNombre"
@@ -70,7 +70,7 @@
         android:layout_marginStart="5dp"
         android:gravity="center_vertical"
         android:text="TextView"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/White"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
@@ -80,19 +80,36 @@
         app:layout_constraintVertical_bias="0.74" />
 
     <TextView
-        android:id="@+id/tvTipo"
-        android:layout_width="290dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="5dp"
+        android:id="@+id/tvMaquina"
+        android:layout_width="152dp"
+        android:layout_height="14dp"
         android:gravity="center_vertical"
         android:text="TextView"
-        android:textSize="12sp"
+        android:textColor="@color/Cornsilk"
+        android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/maquina"
+        android:textColor="@color/White"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.388" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
