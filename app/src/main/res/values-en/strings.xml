@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VirtualGym</string>
+    <string name="Bienvenida">Welcome!!</string>
+    <string name="Rutina">Workout</string>
+    <string name="espere">Please, hold on ...</string>
+</resources>

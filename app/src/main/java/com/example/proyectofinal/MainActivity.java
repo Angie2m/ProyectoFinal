@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -40,8 +42,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class MainActivity extends AppCompatActivity implements Response.Listener<String>, Response.ErrorListener {
     /* Elementos gráficos */
-    ProgressBar pbConexion;
-    ListView lv;
+    private ProgressBar pbConexion;
+    private TextView tvEspere;
+    private ListView lv;
+    private Typeface fuenteFrontier;
 
     /* Elementos para volley */
     RequestQueue queue;
@@ -57,8 +61,11 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         setContentView(R.layout.activity_main);
         pbConexion = findViewById(R.id.pbConexion);
         lv = findViewById(R.id.lv);
+        tvEspere = findViewById(R.id.tvEspere);
+        fuenteFrontier = Typeface.createFromAsset(getAssets(), "Quicksand-Bold.otf");
+        tvEspere.setTypeface(fuenteFrontier);
         queue = Volley.newRequestQueue(this);
-        stringRequest = new StringRequest(Request.Method.GET,"http://192.168.100.177:8080/verEjercicios", this, this);
+        stringRequest = new StringRequest(Request.Method.GET,"http://192.168.100.184:8080/verEjercicios", this, this);
         queue.add(stringRequest);
 
     }

@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Proyecto Final</string>
+    <string name="app_name">VirtualGym</string>
+    <string name="Bienvenida">Bienvenido!!</string>
+    <string name="Rutina">Rutina</string>
+    <string name="espere">Por favor, espere un momento ...</string>
 </resources>
